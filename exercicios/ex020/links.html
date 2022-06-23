@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Pseudos-Elementos EM CSS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited{
+            color: darkred;
+        }
+        a:hover{
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active{
+            color: yellow;
+            text-decoration: none;
+        }
+        .especial{
+            background-color: rgba(78, 184, 105, 0.493);
+            border-radius: 7px;
+        }
+        .especial::before{
+            content: '⇨ ';
+            display: inline-block;
+            color: black;
+        }
+        .especial::after{
+            content: ' ⇦';
+            color: black;
+            display:inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul type="none">
+        <li><a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">Repositorio GitHub</a>
+        <li><a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" rel="external" class="especial">Canal Do YouTube</a>
+        <li><a href="https://www.cursoemvideo.com" target="_blank" rel="external">Site Do CursoEmVideo</a>
+    </ul>
+</body>
+</html>
